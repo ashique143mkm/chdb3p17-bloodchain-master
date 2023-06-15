@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <title>bloodRegister</title>
+  </head>
+   
+  <body>
+    <h1>Blood Doner Register</h1>
+
+    <div id="navMenu">
+    </div>
+
+    <!--<a class="nav-link" id="list" href="/acquireblood"><h3>Acquire blood</h3> </a> -->
+    <!-- 
+    <a class="nav-link" href="/selectfunction" onclick="" style="align:right">Home</a>
+    <a class="nav-link" href="/createblood" onclick="">Create blood</a>
+    <a class="nav-link" href="/acquireblood" onclick="">Acquire blood</a>
+    <a class="nav-link" href="/viewblood" onclick="">View blood</a>
+    <a class="nav-link" href="/" onclick="logout(event)" style="align:right">Logout</a>
+    -->
+    
+    <div class="form-modal">
+
+      <div class="form-toggle">
+          <h3>Enter blood Details</h3>
+      </div>
+
+      <div id="man-form">
+        <form id="manform">           
+          <input id="bloodname" type="text" placeholder="Blood Doner Name" required/>
+          <input id="bloodtype" list="bloodTypes" type="text" placeholder="Blood Group"/>
+              
+            <datalist id="bloodTypes">
+              <option value="A+ve">
+              <option value="A-ve">
+              <option value="B+ve">
+              <option value="B-ve">
+              <option value="O+ve">
+              <option value="O-ve">
+              <option value="AB+ve">
+              <option value="AB+ve">
+              <option value="NOTFIT"> 
+            </datalist>
+           <!-- <input id="bloodtype" type="text" placeholder="blood Type" required/>  -->         
+          <button type="submit" style=" align:center" class="btn login" onclick= "addblood(event)" > Submit</button>
+        </form>
+      </div>   
+    
+    </div>
+    <br>
+    <table id="bloodDetails">
+      <tr>
+        <th>Blood Doner Name</th>
+        <th>Blood Group</th>
+        <th>Status</th> 
+      </tr>
+      {{#listings}}
+      <tr class="">
+        <td>{{bloodName}}</td>
+        <td>{{bloodType}}</td>
+        <td>{{status}}</td>
+      </tr>
+      {{/listings}}
+    </table>
+   
+    <script src="/javascripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
+

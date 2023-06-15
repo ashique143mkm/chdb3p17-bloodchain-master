@@ -1,0 +1,36 @@
+==> Getting Started
+--------------------
+
+The medical field is one of the important field where the data is being given more importance because wrong data or information can harm someone's life.So the data they store are given more importance and are need to be handled more safely. This is the place where the blockchain can help us to solve the problem. The data can be stored and managed using the blockchain technology. That is we can create a blockchain for storing and managing the data of doners and recivers. So that the hospitals and as well as the recivers can verify that the data  is the data that is originated from the orignal place or from a valid person.
+
+
+===> Introduction of Bloodchian
+
+This is a simple project of a Sawtooth 1.0 application, with a transaction processor and corresponding client. This demonstrates a simple use case, where an blood doner can create blood, acquire available bloods and can view bloods acquired by him. Functionalities provided are:
+
+### 1. Create Blood
+-------------------
+The donres are allowed to create blood by providing a blood donername and blood type.
+
+
+### 2. Acquire Blood
+--------------------
+An recivers is allowed to acquire free bloods by selecting the available bloods. Once acquired, the status of blood changes from free to alloted.
+
+
+### 3. View Bloods
+------------------
+The bloods acquired by the recivers and available free bloods will be listed.
+
+## Addressing
+
+The addressing scheme used here for storing asset details is:
+* a 6-hex character prefix (the "bloodregister" Transaction Family namespace),
+* String “00” and
+* the first 62 hex characters of the SHA-512 hash of the asset name in hex.
+
+The addressing scheme used here for storing assests acquired by employee is:
+* a 6-hex character prefix (the "assetregister" Transaction Family namespace),
+* String “01”,
+* the first 32 hex characters of the SHA-512 hash of the student’s public key in hex.
+* the first 30 hex characters of the SHA-512 hash of the asset name in hex.

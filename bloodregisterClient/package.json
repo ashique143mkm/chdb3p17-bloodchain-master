@@ -1,0 +1,22 @@
+{
+  "name": "bloodregister",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "encoding": "^0.1.12",
+    "express": "~4.16.0",
+    "express-handlebars": "^3.0.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "node-fetch": "^2.3.0",
+    "sawtooth-sdk": "^1.0.5",
+    "text-encoding": "^0.7.0",
+    "socket.io": "^2.2.0"
+  }
+}
